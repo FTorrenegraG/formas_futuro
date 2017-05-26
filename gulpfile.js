@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var notify = require("gulp-notify") ;
-var bower = require('gulp-bower');
 var browserSync = require('browser-sync').create();
 var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
@@ -13,23 +12,19 @@ var del = require('del');
 var runSequence = require('run-sequence');
 var config = {
      sassPath: 'app/scss',
-     bowerDir: './bower_components' 
+     npmDir: './node_modules' 
 }
 
-gulp.task('bower', function() { 
-    return bower()
-         .pipe(gulp.dest(config.bowerDir)) 
-});
 gulp.task('javascripts', function() { 
-    return gulp.src(config.bowerDir + '/bootstrap-sass/assets/javascripts/**.*') 
+    return gulp.src(config.npmDir + '/bootstrap-sass/assets/javascripts/**.*') 
         .pipe(gulp.dest('app/js')); 
 })
 gulp.task('jquery', function() { 
-    return gulp.src(config.bowerDir + '/jquery/dist/jquery.js') 
+    return gulp.src(config.npmDir + '/jquery/dist/jquery.js') 
         .pipe(gulp.dest('app/js')); 
 })
 gulp.task('icons', function() { 
-    return gulp.src(config.bowerDir + '/font-awesome/fonts/**.*') 
+    return gulp.src(config.npmDir + '/font-awesome/fonts/**.*') 
         .pipe(gulp.dest('app/fonts')); 
 })
 gulp.task('css', function() { 
@@ -38,8 +33,8 @@ gulp.task('css', function() { 
              style: 'compressed',
              includePaths: [
                 'app/scss',
-                config.bowerDir + '/bootstrap-sass/assets/stylesheets',
-                 config.bowerDir + '/font-awesome/scss',
+                config.npmDir + '/bootstrap-sass/assets/stylesheets',
+                 config.npmDir + '/font-awesome/scss',
              ]
          }) 
         .on("error", notify.onError(function (error) {
@@ -57,7 +52,7 @@ gulp.task('browserSync', function() {
   })
 })
 
-gulp.task('serve', ['bower','browserSync','icons','css','javascripts','jquery'], function (){
+gulp.task('serve', ['browserSync','icons','css','javascripts','jquery'], function (){
   gulp.watch(config.sassPath + '/**/*.scss', ['css']); 
   // Reloads the browser whenever HTML or JS files change
   gulp.watch('app/*.html', browserSync.reload); 
