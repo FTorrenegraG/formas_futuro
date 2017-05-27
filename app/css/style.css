@@ -8143,3 +8143,90 @@ button.close {
   margin: 0;
   overflow: visible;
   clip: auto; }
+
+.navbar {
+  margin-top: 50px;
+  height: 170px; }
+  .navbar.navbar-default {
+    background-color: transparent;
+    border-color: transparent; }
+  .navbar .container {
+    height: 100%; }
+    .navbar .container .navbar-header {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center; }
+      .navbar .container .navbar-header .navbar-brand {
+        display: block;
+        height: 100%;
+        padding: 0; }
+      .navbar .container .navbar-header .navbar-toggle {
+        display: block;
+        float: right;
+        order: 2;
+        margin-left: auto;
+        border-color: transparent; }
+        .navbar .container .navbar-header .navbar-toggle:hover {
+          background-color: transparent; }
+        .navbar .container .navbar-header .navbar-toggle:focus {
+          background-color: transparent; }
+        .navbar .container .navbar-header .navbar-toggle .icon-bar {
+          background-color: white; }
+
+.jumbotron {
+  height: 100vh;
+  padding-top: 140px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 0;
+  transition: all 0.2s linear; }
+  .jumbotron.bg01 {
+    background-image: url(../images/img_index/bg01.png); }
+  .jumbotron.bg02 {
+    background-image: url(../images/img_index/bg02.png); }
+  .jumbotron.bg03 {
+    background-image: url(../images/img_index/bg03.png); }
+  .jumbotron.index-ff .images #img_index_center02 {
+    margin-left: 45px; }
+  .jumbotron.index-ff .images .img-center {
+    height: 311px; }
+  .jumbotron.index-ff .buttons {
+    margin-top: 35px; }
+    .jumbotron.index-ff .buttons .btn {
+      border-radius: 0px;
+      height: 40px;
+      line-height: 26px;
+      font-size: 15px;
+      font-weight: 400; }
+      .jumbotron.index-ff .buttons .btn.btn-warning {
+        background-color: #EDBF37; }
+      .jumbotron.index-ff .buttons .btn.btn-default {
+        background-color: white;
+        color: #9E9E9E; }
+      .jumbotron.index-ff .buttons .btn:hover {
+        box-shadow: 5px 5px 30px -8px black;
+        transition: all 1s linear; }
+
+.modal-nav-content {
+  width: 100%;
+  height: auto; }
+  .modal-nav-content .modal-nav-body {
+    margin-top: 100px; }
+    .modal-nav-content .modal-nav-body ul {
+      list-style-type: none;
+      color: white;
+      margin: 0;
+      padding: 0;
+      width: 100%; }
+      .modal-nav-content .modal-nav-body ul li {
+        text-align: center;
+        font-size: 130%;
+        padding: 8px;
+        text-transform: uppercase; }
+
+footer {
+  text-align: center;
+  color: white;
+  opacity: 0.5;
+  height: 50px; }
