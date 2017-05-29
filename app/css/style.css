@@ -8166,13 +8166,29 @@ button.close {
         float: right;
         order: 2;
         margin-left: auto;
-        border-color: transparent; }
-        .navbar .container .navbar-header .navbar-toggle:hover {
-          background-color: transparent; }
-        .navbar .container .navbar-header .navbar-toggle:focus {
-          background-color: transparent; }
+        border-color: transparent;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        padding-left: 13px; }
+        .navbar .container .navbar-header .navbar-toggle.collapsed .icon-bar:nth-child(2) {
+          transform: rotate(0) translateY(0) translateX(0); }
+        .navbar .container .navbar-header .navbar-toggle.collapsed .icon-bar:nth-child(3) {
+          opacity: 1; }
+        .navbar .container .navbar-header .navbar-toggle.collapsed .icon-bar:nth-child(4) {
+          transform: rotate(0) translateY(0) translateX(0); }
         .navbar .container .navbar-header .navbar-toggle .icon-bar {
+          transition: .5s ease;
           background-color: white; }
+          .navbar .container .navbar-header .navbar-toggle .icon-bar:nth-child(2) {
+            transform: rotate(-45deg) translateY(5px) translateX(-5px); }
+          .navbar .container .navbar-header .navbar-toggle .icon-bar:nth-child(3) {
+            opacity: 0; }
+          .navbar .container .navbar-header .navbar-toggle .icon-bar:nth-child(4) {
+            transform: rotate(45deg) translateY(-4px) translateX(-3px); }
+        .navbar .container .navbar-header .navbar-toggle:hover, .navbar .container .navbar-header .navbar-toggle:focus {
+          background-color: rgba(0, 0, 0, 0.5);
+          transition: all 0.2s linear; }
 
 .jumbotron {
   height: 100vh;
@@ -8194,39 +8210,66 @@ button.close {
   .jumbotron.index-ff .buttons {
     margin-top: 35px; }
     .jumbotron.index-ff .buttons .btn {
-      border-radius: 0px;
+      border-radius: 3px;
+      border-color: transparent;
       height: 40px;
       line-height: 26px;
       font-size: 15px;
-      font-weight: 400; }
+      font-weight: 400;
+      box-shadow: 2px 2px 20px -8px black; }
       .jumbotron.index-ff .buttons .btn.btn-warning {
-        background-color: #EDBF37; }
+        background-color: #EDBF37;
+        box-shadow: 5px 5px 30px -8px #9d5c00; }
       .jumbotron.index-ff .buttons .btn.btn-default {
         background-color: white;
         color: #9E9E9E; }
       .jumbotron.index-ff .buttons .btn:hover {
         box-shadow: 5px 5px 30px -8px black;
-        transition: all 1s linear; }
+        transition: all 0.2s linear; }
 
-.modal-nav-content {
+#body-home {
+  background-color: black; }
+
+#menu {
+  display: none;
+  background: #051d2c;
+  background: -moz-linear-gradient(45deg, #051d2c 0%, #1b3c51 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, #051d2c), color-stop(100%, #1b3c51));
+  background: -webkit-linear-gradient(45deg, #051d2c 0%, #1b3c51 100%);
+  background: -o-linear-gradient(45deg, #051d2c 0%, #1b3c51 100%);
+  background: -ms-linear-gradient(45deg, #051d2c 0%, #1b3c51 100%);
+  background: linear-gradient(45deg, #051d2c 0%, #1b3c51 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#051d2c', endColorstr='#1b3c51', GradientType=1 );
   width: 100%;
-  height: auto; }
-  .modal-nav-content .modal-nav-body {
-    margin-top: 100px; }
-    .modal-nav-content .modal-nav-body ul {
-      list-style-type: none;
-      color: white;
-      margin: 0;
-      padding: 0;
-      width: 100%; }
-      .modal-nav-content .modal-nav-body ul li {
-        text-align: center;
-        font-size: 130%;
-        padding: 8px;
-        text-transform: uppercase; }
+  height: 100vh; }
+  #menu .modal-nav-content {
+    padding-top: 150px; }
+    #menu .modal-nav-content .modal-nav-body {
+      position: relative;
+      z-index: 100000;
+      width: 400px;
+      margin: auto; }
+      #menu .modal-nav-content .modal-nav-body ul {
+        list-style-type: none;
+        color: white;
+        margin: 0;
+        padding: 0;
+        width: 100%; }
+        #menu .modal-nav-content .modal-nav-body ul li {
+          text-align: center;
+          font-size: 130%;
+          padding: 2px 8px;
+          cursor: pointer; }
+          #menu .modal-nav-content .modal-nav-body ul li:hover {
+            color: #5f9ee1; }
+          #menu .modal-nav-content .modal-nav-body ul li.more-padding {
+            padding: 15px 8px; }
 
 footer {
   text-align: center;
   color: white;
   opacity: 0.5;
-  height: 50px; }
+  height: 50px;
+  transition: all 0.2s linear; }
+  footer.no-opa {
+    opacity: 1; }

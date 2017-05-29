@@ -16,65 +16,64 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body id="body-home">
   
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="modal" data-target="#nav-modal" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">
-          <img src="images/img_index/Logo3FF.png">
-        </a>
-      </div>    
-    </div>
-  </nav>
-  <div class="jumbotron bg01 index-ff">
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
-        <div class="row ">
-          <div class="col-md-6 col-md-offset-3 images">
-            <img id="img_index_center01" class="img-center " src="images/img_index/img01.png">
-            <img id="img_index_center02" class="img-center hide" src="images/img_index/img02.png">
-            <img id="img_index_center03" class="img-center hide" src="images/img_index/img03.png">
-          </div>
-        </div>
-        <div class="row buttons">
-          <div class="col-md-2 col-md-offset-4">
-            <a href="#" class="btn btn-warning btn-block">Conócenos</a>
-          </div>
-          <div class="col-md-2">
-            <a href="#" class="btn btn-default btn-block">Diviertéte</a>
-          </div>
-        </div>
+
+        <div class="navbar-header">
+          <button id="navbar-toggle" type="button" class="navbar-toggle collapsed">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="images/img_index/Logo3FF.png">
+          </a>
+        </div>    
       </div>
-  </div>
-  <footer class="navbar-fixed-bottom">
-    <p>© Copyright 2017 | Formas Futuro  | Todos los derechos reservados</p>
-  </footer>
-  <!-- Modal -->
-  <div class="modal fade" id="nav-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
+    </nav>
+    <section id="content">
+    <div class="jumbotron bg01 index-ff">
+        <div class="container">
+          <div class="row ">
+            <div class="col-md-6 col-md-offset-3 images">
+              <img id="img_index_center01" class="img-center " src="images/img_index/img01.png">
+              <img id="img_index_center02" class="img-center hide" src="images/img_index/img02.png">
+              <img id="img_index_center03" class="img-center hide" src="images/img_index/img03.png">
+            </div>
+          </div>
+          <div class="row buttons">
+            <div class="col-md-2 col-md-offset-4">
+              <a href="#" class="btn btn-warning btn-block">Conócenos</a>
+            </div>
+            <div class="col-md-2">
+              <a href="#" class="btn btn-default btn-block">Diviertéte</a>
+            </div>
+          </div>
+        </div>
+    </div>
+    </section>
+    <section id="menu">
       <div class="modal-nav-content">
         <div class="modal-nav-body">
           <ul>
             <li><b>Home</b></li>
             <li><b>Conócenos</b></li>
-            <li>Quienes Somos</li>
-            <li>Productos</li>
-            <li>Blog</li>
-            <li>Contacto</li>
+            <li class="more-padding" >Quienes Somos</li>
+            <li class="more-padding" >Productos</li>
+            <li class="more-padding" >Blog</li>
+            <li class="more-padding" >Contacto</li>
             <li><b>Diviertete</b></li>
             <li><b>Soy un cliente</b></li>
           </ul>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
+    <footer class="navbar-fixed-bottom">
+      <p>© Copyright 2017 | Formas Futuro  | Todos los derechos reservados</p>
+    </footer>
     <!--build:js js/jquery.min.js -->
     <script src="js/jquery.js"></script>
     <!--endbuild-->
