@@ -4,7 +4,12 @@ $font-family-base: 'Raleway', sans-serif;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
-
+body{
+	background-color: black;
+}
+section{
+	background-color: white;
+}
 .navbar{
 	margin-top: 50px;
 	height: 170px;
@@ -68,63 +73,61 @@ $font-family-base: 'Raleway', sans-serif;
 		}
 	}
 }
-
-.jumbotron{
-	height: 100vh;
-	padding-top: 140px;
-	background-repeat: no-repeat;
-	background-size: cover;
-	margin-bottom: 0;
-	transition: all 0.2s linear;
-	&.bg01{
-		background-image: url(../images/img_index/bg01.png);
-	}
-	&.bg02{
-		background-image: url(../images/img_index/bg02.png);
-	}
-	&.bg03{
-		background-image: url(../images/img_index/bg03.png);
-	}
-	&.index-ff{
-		.images{
-			#img_index_center02{
-				margin-left: 45px;
-			}
-			.img-center{
-				height: 311px;
-			}
-		}
-		.buttons{
-			margin-top: 35px;
-			.btn{
-				border-radius: 3px;
-				border-color: transparent;
-				height: 40px;
-				line-height: 26px;
-				font-size: 15px;
-				font-weight: 400;
-				box-shadow: 2px 2px 20px -8px black;
-				&.btn-warning{
-					background-color: #EDBF37;
-					box-shadow: 5px 5px 30px -8px #9d5c00;
-				}
-				&.btn-default{
-					background-color: white;
-					color: #9E9E9E
-				}
-				&:hover{
-					box-shadow: 5px 5px 30px -8px black;
-					transition: all 0.2s linear;
-				}
-			}
-		}
-	}
-	.container{
-		
-	}
-}
 #body-home{
-	background-color: black;
+	.jumbotron{
+		height: 100vh;
+		padding-top: 140px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		margin-bottom: 0;
+		transition: all 0.2s linear;
+		&.bg01{
+			background-image: url(../images/img_index/bg01.png);
+		}
+		&.bg02{
+			background-image: url(../images/img_index/bg02.png);
+		}
+		&.bg03{
+			background-image: url(../images/img_index/bg03.png);
+		}
+		&.index-ff{
+			.images{
+				#img_index_center02{
+					margin-left: 45px;
+				}
+				.img-center{
+					height: 311px;
+				}
+			}
+			.buttons{
+				margin-top: 35px;
+				.btn{
+					border-radius: 3px;
+					border-color: transparent;
+					height: 40px;
+					line-height: 26px;
+					font-size: 15px;
+					font-weight: 400;
+					box-shadow: 2px 2px 20px -8px black;
+					&.btn-warning{
+						background-color: #EDBF37;
+						box-shadow: 5px 5px 30px -8px #9d5c00;
+					}
+					&.btn-default{
+						background-color: white;
+						color: #9E9E9E
+					}
+					&:hover{
+						box-shadow: 5px 5px 30px -8px black;
+						transition: all 0.2s linear;
+					}
+				}
+			}
+		}
+		.container{
+			
+		}
+	}
 }
 #menu{
 	display: none;

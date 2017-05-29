@@ -8144,6 +8144,12 @@ button.close {
   overflow: visible;
   clip: auto; }
 
+body {
+  background-color: black; }
+
+section {
+  background-color: white; }
+
 .navbar {
   margin-top: 50px;
   height: 170px; }
@@ -8190,26 +8196,26 @@ button.close {
           background-color: rgba(0, 0, 0, 0.5);
           transition: all 0.2s linear; }
 
-.jumbotron {
+#body-home .jumbotron {
   height: 100vh;
   padding-top: 140px;
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 0;
   transition: all 0.2s linear; }
-  .jumbotron.bg01 {
+  #body-home .jumbotron.bg01 {
     background-image: url(../images/img_index/bg01.png); }
-  .jumbotron.bg02 {
+  #body-home .jumbotron.bg02 {
     background-image: url(../images/img_index/bg02.png); }
-  .jumbotron.bg03 {
+  #body-home .jumbotron.bg03 {
     background-image: url(../images/img_index/bg03.png); }
-  .jumbotron.index-ff .images #img_index_center02 {
+  #body-home .jumbotron.index-ff .images #img_index_center02 {
     margin-left: 45px; }
-  .jumbotron.index-ff .images .img-center {
+  #body-home .jumbotron.index-ff .images .img-center {
     height: 311px; }
-  .jumbotron.index-ff .buttons {
+  #body-home .jumbotron.index-ff .buttons {
     margin-top: 35px; }
-    .jumbotron.index-ff .buttons .btn {
+    #body-home .jumbotron.index-ff .buttons .btn {
       border-radius: 3px;
       border-color: transparent;
       height: 40px;
@@ -8217,18 +8223,15 @@ button.close {
       font-size: 15px;
       font-weight: 400;
       box-shadow: 2px 2px 20px -8px black; }
-      .jumbotron.index-ff .buttons .btn.btn-warning {
+      #body-home .jumbotron.index-ff .buttons .btn.btn-warning {
         background-color: #EDBF37;
         box-shadow: 5px 5px 30px -8px #9d5c00; }
-      .jumbotron.index-ff .buttons .btn.btn-default {
+      #body-home .jumbotron.index-ff .buttons .btn.btn-default {
         background-color: white;
         color: #9E9E9E; }
-      .jumbotron.index-ff .buttons .btn:hover {
+      #body-home .jumbotron.index-ff .buttons .btn:hover {
         box-shadow: 5px 5px 30px -8px black;
         transition: all 0.2s linear; }
-
-#body-home {
-  background-color: black; }
 
 #menu {
   display: none;
