@@ -1,5 +1,20 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,700,300);
+/* @font-face {
+	font-family: "Hagin Caps";
+	src: url("../fonts/Hagin Caps Medium 2.otf") format("otf"),
+		 url("../fonts/Hagin Caps Medium 3.otf") format("otf"),
+		 url("../fonts/Hagin Caps Medium 4.otf") format("otf"),
+		 url("../fonts/Hagin Caps Medium 5.otf") format("otf"),
+		 url("../fonts/Hagin Caps Medium 6.otf") format("otf"),
+		 url("../fonts/Hagin Caps Medium 7.otf") format("otf"),
+		 url("../fonts/Hagin Caps Medium 8.otf") format("otf"),
+		 url("../fonts/Hagin Caps Medium.otf") format("otf");
+} */
+@import "mixins";
+@include font-face("Hagin Caps",'../fonts/Hagin_Caps_Medium');
 $font-family-base: 'Raleway', sans-serif;
+$font-family-base-especial: 'Hagin Caps';
+$color-text: #595959;
 // Import bootstrap and fontawesome
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -7,12 +22,20 @@ $font-family-base: 'Raleway', sans-serif;
 body{
 	background-color: black;
 }
-section{
+#content{
 	background-color: white;
+}
+.vertical-align {
+    display: flex;
+    align-items: center;
 }
 .navbar{
 	margin-top: 50px;
 	height: 170px;
+	&.know_us{
+		height: 90px;
+		margin-top: 20px;
+	}
 	&.navbar-default{
 		background-color: transparent;
 		border-color: transparent;
@@ -28,6 +51,10 @@ section{
 		    	display: block;
 		    	height: 100%;
 		    	padding: 0;
+		    	transition: all 0.2s linear;
+		    	img{
+		    		height: 100%;
+		    	}
 		    }
 			.navbar-toggle {
 				display: block;
@@ -39,19 +66,6 @@ section{
 				width: 50px;
 				border-radius: 50%;
 				padding-left: 13px;
-				&.collapsed {
-					.icon-bar{
-						&:nth-child(2){
-							transform: rotate(0)translateY(0)translateX(0);
-						}
-						&:nth-child(3){
-							opacity:1
-						}
-						&:nth-child(4){
-							transform:rotate(0)translateY(0)translateX(0);
-						}
-					}
-				}
 				.icon-bar{
 					transition: .5s ease;
 					background-color: white;
@@ -65,7 +79,29 @@ section{
 						transform:rotate(45deg)translateY(-4px)translateX(-3px);
 					}
 				}
+				&.collapsed {
+					.icon-bar{
+						&.white{
+							background-color: white;
+						}
+						&.dark{
+							background-color: black;
+						}
+						&:nth-child(2){
+							transform: rotate(0)translateY(0)translateX(0);
+						}
+						&:nth-child(3){
+							opacity:1
+						}
+						&:nth-child(4){
+							transform:rotate(0)translateY(0)translateX(0);
+						}
+					}
+				}
 				&:hover,&:focus{
+					.icon-bar{
+						background-color: white !important;
+					}
 					background-color: rgba(0, 0, 0, 0.5);
 					transition: all 0.2s linear;
 				}
@@ -129,6 +165,282 @@ section{
 		}
 	}
 }
+#body-know_us{
+	.jumbotron{
+		height: 100vh;
+		padding-top: 140px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		margin-bottom: 0;
+		transition: all 0.2s linear;
+		background-image: url(../images/img_know_us/bg_banner.png);
+		img{
+			width: 100%;
+		}
+		.texts{
+			.text{
+				font-size: 18px;
+				color: #6c6c6c;
+				&.bold-blue{
+					font-family: $font-family-base-especial;
+					text-transform: uppercase;
+					color: #1c2f43;
+					font-size: 38px;
+					font-weight: 500;
+					.font-dif{
+						font-size: 48px;
+					}
+					.font-dif-less{
+						font-size: 30px;
+					}
+				}
+			}
+		}
+	}
+	#scroll{
+		text-align: center;
+		width: 100%;
+		position: absolute;
+		bottom: 20px;
+		img{
+			height: 130px;
+			opacity: 0.5;
+		}
+	}
+	#section01{
+		color: $color-text;
+		.container{
+			width: 70%;
+		}
+		.texts{
+			padding-right: 80px;
+		}
+		.title-section{
+			font-weight: bold;
+			font-size: 28px;
+			text-transform: uppercase;
+			&.more-bold{
+				font-size: 30px;
+			}
+		}
+		img{
+			width: 100%;
+		}
+		h2{
+			text-align: center;
+			font-weight: 600;
+			text-transform: uppercase;
+			width: 80%;
+			margin: 55px auto 30px auto;
+		}
+		h4{
+			text-align: center;
+			width: 80%;
+			margin: 0 auto 80px auto;
+		}
+	}
+	#section02{
+		position: relative;
+		bottom: 85px;
+		color: $color-text;
+		.container{
+			width: 70%;
+		}
+		.texts{
+			padding-left: 80px;
+
+		}
+		.title-section{
+			margin-top: 125px;
+			font-weight: bold;
+			font-size: 28px;
+			text-transform: uppercase;
+			text-align: right;
+		}
+		img{
+			width: 100%;
+		}
+	}
+	#section03{
+		position: relative;
+		bottom: 145px;
+		color: $color-text;
+		.container{
+			width: 70%;
+		}
+		.texts{
+			
+
+		}
+		.title-section{
+			margin-top: 125px;
+			font-weight: bold;
+			font-size: 28px;
+			text-transform: uppercase;
+			
+		}
+		img{
+			width: 125%;
+			position: relative;
+			left: -85px;
+		}
+	}
+	#section04{
+		position: relative;
+		bottom: 125px;
+		color: $color-text;
+		.container{
+			width: 70%;
+		}
+		.texts{
+			padding-left: 80px;
+
+		}
+		.btn{
+			height: 35px;
+			width: 150px;
+			border-color: transparent;
+			border-radius: 0px;
+			float: right;
+			&.btn-danger{
+				background-color: #dd6d5c;
+			}
+		}
+		.title-section{
+			margin-top: 125px;
+			font-weight: bold;
+			font-size: 28px;
+			text-transform: uppercase;
+			text-align: left;
+		}
+		.tuto{
+			margin-top: 15px;
+			font-weight: bold;
+			font-size: 22px;
+			text-transform: uppercase;
+			text-align: left;
+		}
+		img{
+			width: 100%;
+		}
+	}
+	#section05{
+		color: $color-text;
+		margin-bottom: 50px;
+		.container{
+			width: 70%;
+		}
+		.title-section{
+			font-weight: bold;
+			font-size: 20px;
+			text-transform: uppercase;
+			&.more-bold{
+				font-size: 30px;
+			}
+		}
+		.btn{
+			height: 35px;
+			width: 110px;
+			border-color: transparent;
+			border-radius: 0px;
+			float: left;
+			&.btn-danger{
+				background-color: #dd6d5c;
+			}
+		}
+		p{
+			text-transform: uppercase;
+			font-size: 15px;
+			line-height: 15px;
+		}
+		img{
+			width: 100%;
+		}
+		h2{
+			text-align: center;
+			font-weight: 600;
+			text-transform: uppercase;
+			width: 80%;
+			margin: 0 auto 30px auto;
+		}
+		h4{
+			text-align: center;
+			width: 80%;
+			margin: 0 auto 80px auto;
+		}
+	}
+	#sectionMail{
+		color: white;
+		background-color: #ffb757;
+		.container{
+			width: 70%;
+		}
+		h2{
+			text-align: center;
+			font-weight: 600;
+			text-transform: uppercase;
+			width: 50%;
+			margin: 25px auto 30px auto;
+		}
+		img{
+			width: 100%;
+		}
+		.form-control{
+			border-color: transparent;
+			background-color: #d79b4a;
+		}
+		.form-group{
+			label{
+				font-weight: 500;
+				font-size: 15px;
+			}
+		}
+		.btn{
+			height: 35px;
+			width: 150px;
+			border-color: transparent;
+			border-radius: 0px;
+			position: relative;
+			top: -35px;
+			right: -45px;
+			float: right;
+			&.btn-danger{
+				background-color: #dd6d5c;
+			}
+		}
+	}
+	footer{
+		background-color: #d79b4a;
+		padding-top: 15px;
+		color: white;
+		opacity: 1;
+		height: 100%;
+		.container{
+			width: 70%;
+		}
+		.row{
+			margin-top: 15px;
+			margin-bottom: 10px;
+			&.different{
+				margin-bottom: 25px;
+				img{
+					width: 70%;
+					&.more-small{
+						width: 50%;
+					}
+				}
+				p{
+					opacity: 1;
+					font-size: 18px;
+
+				}
+			}
+		}
+		p{
+			opacity: 0.5;
+		}
+	}
+}
 #menu{
 	display: none;
 	background: rgba(5,29,44,1);
@@ -159,9 +471,13 @@ section{
 					font-size: 130%;
 					padding: 2px 8px;
 					cursor: pointer;
-					&:hover{
-						color: #5f9ee1;
-					}			
+					a{
+						color: white;
+						text-decoration: none;
+						&:hover{
+							color: #5f9ee1;
+						}	
+					}		
 					&.more-padding{
 						padding: 15px 8px;
 					}

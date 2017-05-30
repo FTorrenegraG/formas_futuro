@@ -1,5 +1,20 @@
 @charset "UTF-8";
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,700,300);
+/* @font-face {
+	font-family: "Hagin Caps";
+	src: url("../fonts/Hagin Caps Medium 2.otf") format("otf"),
+		 url("../fonts/Hagin Caps Medium 3.otf") format("otf"),
+		 url("../fonts/Hagin Caps Medium 4.otf") format("otf"),
+		 url("../fonts/Hagin Caps Medium 5.otf") format("otf"),
+		 url("../fonts/Hagin Caps Medium 6.otf") format("otf"),
+		 url("../fonts/Hagin Caps Medium 7.otf") format("otf"),
+		 url("../fonts/Hagin Caps Medium 8.otf") format("otf"),
+		 url("../fonts/Hagin Caps Medium.otf") format("otf");
+} */
+@font-face {
+  font-family: "Hagin Caps";
+  src: url("../fonts/Hagin_Caps_Medium.eot?") format("eot"), url("../fonts/Hagin_Caps_Medium.woff") format("woff"), url("../fonts/Hagin_Caps_Medium.ttf") format("truetype"), url("../fonts/Hagin_Caps_Medium.svg#Hagin_Caps") format("svg"); }
+
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -8147,12 +8162,19 @@ button.close {
 body {
   background-color: black; }
 
-section {
+#content {
   background-color: white; }
+
+.vertical-align {
+  display: flex;
+  align-items: center; }
 
 .navbar {
   margin-top: 50px;
   height: 170px; }
+  .navbar.know_us {
+    height: 90px;
+    margin-top: 20px; }
   .navbar.navbar-default {
     background-color: transparent;
     border-color: transparent; }
@@ -8166,7 +8188,10 @@ section {
       .navbar .container .navbar-header .navbar-brand {
         display: block;
         height: 100%;
-        padding: 0; }
+        padding: 0;
+        transition: all 0.2s linear; }
+        .navbar .container .navbar-header .navbar-brand img {
+          height: 100%; }
       .navbar .container .navbar-header .navbar-toggle {
         display: block;
         float: right;
@@ -8177,12 +8202,6 @@ section {
         width: 50px;
         border-radius: 50%;
         padding-left: 13px; }
-        .navbar .container .navbar-header .navbar-toggle.collapsed .icon-bar:nth-child(2) {
-          transform: rotate(0) translateY(0) translateX(0); }
-        .navbar .container .navbar-header .navbar-toggle.collapsed .icon-bar:nth-child(3) {
-          opacity: 1; }
-        .navbar .container .navbar-header .navbar-toggle.collapsed .icon-bar:nth-child(4) {
-          transform: rotate(0) translateY(0) translateX(0); }
         .navbar .container .navbar-header .navbar-toggle .icon-bar {
           transition: .5s ease;
           background-color: white; }
@@ -8192,9 +8211,21 @@ section {
             opacity: 0; }
           .navbar .container .navbar-header .navbar-toggle .icon-bar:nth-child(4) {
             transform: rotate(45deg) translateY(-4px) translateX(-3px); }
+        .navbar .container .navbar-header .navbar-toggle.collapsed .icon-bar.white {
+          background-color: white; }
+        .navbar .container .navbar-header .navbar-toggle.collapsed .icon-bar.dark {
+          background-color: black; }
+        .navbar .container .navbar-header .navbar-toggle.collapsed .icon-bar:nth-child(2) {
+          transform: rotate(0) translateY(0) translateX(0); }
+        .navbar .container .navbar-header .navbar-toggle.collapsed .icon-bar:nth-child(3) {
+          opacity: 1; }
+        .navbar .container .navbar-header .navbar-toggle.collapsed .icon-bar:nth-child(4) {
+          transform: rotate(0) translateY(0) translateX(0); }
         .navbar .container .navbar-header .navbar-toggle:hover, .navbar .container .navbar-header .navbar-toggle:focus {
           background-color: rgba(0, 0, 0, 0.5);
           transition: all 0.2s linear; }
+          .navbar .container .navbar-header .navbar-toggle:hover .icon-bar, .navbar .container .navbar-header .navbar-toggle:focus .icon-bar {
+            background-color: white !important; }
 
 #body-home .jumbotron {
   height: 100vh;
@@ -8233,6 +8264,218 @@ section {
         box-shadow: 5px 5px 30px -8px black;
         transition: all 0.2s linear; }
 
+#body-know_us .jumbotron {
+  height: 100vh;
+  padding-top: 140px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 0;
+  transition: all 0.2s linear;
+  background-image: url(../images/img_know_us/bg_banner.png); }
+  #body-know_us .jumbotron img {
+    width: 100%; }
+  #body-know_us .jumbotron .texts .text {
+    font-size: 18px;
+    color: #6c6c6c; }
+    #body-know_us .jumbotron .texts .text.bold-blue {
+      font-family: "Hagin Caps";
+      text-transform: uppercase;
+      color: #1c2f43;
+      font-size: 38px;
+      font-weight: 500; }
+      #body-know_us .jumbotron .texts .text.bold-blue .font-dif {
+        font-size: 48px; }
+      #body-know_us .jumbotron .texts .text.bold-blue .font-dif-less {
+        font-size: 30px; }
+
+#body-know_us #scroll {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: 20px; }
+  #body-know_us #scroll img {
+    height: 130px;
+    opacity: 0.5; }
+
+#body-know_us #section01 {
+  color: #595959; }
+  #body-know_us #section01 .container {
+    width: 70%; }
+  #body-know_us #section01 .texts {
+    padding-right: 80px; }
+  #body-know_us #section01 .title-section {
+    font-weight: bold;
+    font-size: 28px;
+    text-transform: uppercase; }
+    #body-know_us #section01 .title-section.more-bold {
+      font-size: 30px; }
+  #body-know_us #section01 img {
+    width: 100%; }
+  #body-know_us #section01 h2 {
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 80%;
+    margin: 55px auto 30px auto; }
+  #body-know_us #section01 h4 {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto 80px auto; }
+
+#body-know_us #section02 {
+  position: relative;
+  bottom: 85px;
+  color: #595959; }
+  #body-know_us #section02 .container {
+    width: 70%; }
+  #body-know_us #section02 .texts {
+    padding-left: 80px; }
+  #body-know_us #section02 .title-section {
+    margin-top: 125px;
+    font-weight: bold;
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align: right; }
+  #body-know_us #section02 img {
+    width: 100%; }
+
+#body-know_us #section03 {
+  position: relative;
+  bottom: 145px;
+  color: #595959; }
+  #body-know_us #section03 .container {
+    width: 70%; }
+  #body-know_us #section03 .title-section {
+    margin-top: 125px;
+    font-weight: bold;
+    font-size: 28px;
+    text-transform: uppercase; }
+  #body-know_us #section03 img {
+    width: 125%;
+    position: relative;
+    left: -85px; }
+
+#body-know_us #section04 {
+  position: relative;
+  bottom: 125px;
+  color: #595959; }
+  #body-know_us #section04 .container {
+    width: 70%; }
+  #body-know_us #section04 .texts {
+    padding-left: 80px; }
+  #body-know_us #section04 .btn {
+    height: 35px;
+    width: 150px;
+    border-color: transparent;
+    border-radius: 0px;
+    float: right; }
+    #body-know_us #section04 .btn.btn-danger {
+      background-color: #dd6d5c; }
+  #body-know_us #section04 .title-section {
+    margin-top: 125px;
+    font-weight: bold;
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align: left; }
+  #body-know_us #section04 .tuto {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 22px;
+    text-transform: uppercase;
+    text-align: left; }
+  #body-know_us #section04 img {
+    width: 100%; }
+
+#body-know_us #section05 {
+  color: #595959;
+  margin-bottom: 50px; }
+  #body-know_us #section05 .container {
+    width: 70%; }
+  #body-know_us #section05 .title-section {
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase; }
+    #body-know_us #section05 .title-section.more-bold {
+      font-size: 30px; }
+  #body-know_us #section05 .btn {
+    height: 35px;
+    width: 110px;
+    border-color: transparent;
+    border-radius: 0px;
+    float: left; }
+    #body-know_us #section05 .btn.btn-danger {
+      background-color: #dd6d5c; }
+  #body-know_us #section05 p {
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 15px; }
+  #body-know_us #section05 img {
+    width: 100%; }
+  #body-know_us #section05 h2 {
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 80%;
+    margin: 0 auto 30px auto; }
+  #body-know_us #section05 h4 {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto 80px auto; }
+
+#body-know_us #sectionMail {
+  color: white;
+  background-color: #ffb757; }
+  #body-know_us #sectionMail .container {
+    width: 70%; }
+  #body-know_us #sectionMail h2 {
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 50%;
+    margin: 25px auto 30px auto; }
+  #body-know_us #sectionMail img {
+    width: 100%; }
+  #body-know_us #sectionMail .form-control {
+    border-color: transparent;
+    background-color: #d79b4a; }
+  #body-know_us #sectionMail .form-group label {
+    font-weight: 500;
+    font-size: 15px; }
+  #body-know_us #sectionMail .btn {
+    height: 35px;
+    width: 150px;
+    border-color: transparent;
+    border-radius: 0px;
+    position: relative;
+    top: -35px;
+    right: -45px;
+    float: right; }
+    #body-know_us #sectionMail .btn.btn-danger {
+      background-color: #dd6d5c; }
+
+#body-know_us footer {
+  background-color: #d79b4a;
+  padding-top: 15px;
+  color: white;
+  opacity: 1;
+  height: 100%; }
+  #body-know_us footer .container {
+    width: 70%; }
+  #body-know_us footer .row {
+    margin-top: 15px;
+    margin-bottom: 10px; }
+    #body-know_us footer .row.different {
+      margin-bottom: 25px; }
+      #body-know_us footer .row.different img {
+        width: 70%; }
+        #body-know_us footer .row.different img.more-small {
+          width: 50%; }
+      #body-know_us footer .row.different p {
+        opacity: 1;
+        font-size: 18px; }
+  #body-know_us footer p {
+    opacity: 0.5; }
+
 #menu {
   display: none;
   background: #051d2c;
@@ -8263,8 +8506,11 @@ section {
           font-size: 130%;
           padding: 2px 8px;
           cursor: pointer; }
-          #menu .modal-nav-content .modal-nav-body ul li:hover {
-            color: #5f9ee1; }
+          #menu .modal-nav-content .modal-nav-body ul li a {
+            color: white;
+            text-decoration: none; }
+            #menu .modal-nav-content .modal-nav-body ul li a:hover {
+              color: #5f9ee1; }
           #menu .modal-nav-content .modal-nav-body ul li.more-padding {
             padding: 15px 8px; }
 
