@@ -175,12 +175,13 @@ body{
 }
 #body-know_us{
 	.jumbotron{
-		height: 100vh;
+		height: 550px;
 		padding-top: 140px;
 		background-repeat: no-repeat;
 		background-size: cover;
 		margin-bottom: 0;
 		transition: all 0.2s linear;
+		background-size: 100% 100%;
 		background-image: url(../images/img_know_us/bg_banner.png);
 		img{
 			width: 110%;
@@ -212,7 +213,8 @@ body{
 		text-align: center;
 		width: 100%;
 		position: absolute;
-		bottom: 26px;
+		top: 480px;
+		cursor: pointer;
 		img{
 			height: 130px;
 			opacity: 0.5;
@@ -478,7 +480,9 @@ body{
 	width: 100%;
 	height: 100vh;
 	.modal-nav-content {
-		padding-top: 150px;
+		height: 100%;
+		display: flex;
+    	align-items: center;
 		.modal-nav-body {
 			position: relative;
 			z-index: 100000;

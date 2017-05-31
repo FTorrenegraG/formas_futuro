@@ -3,6 +3,11 @@ $( document ).ready(function() {
   $(".navbar-brand").mouseup(function(){
       $(this).blur();
   });
+  $("#scroll").on("click",function(){
+    $('html,body').animate({
+        scrollTop: $("#section01").offset().top},
+        'slow');
+  })
   window.setInterval(function () {
     move ++
    $(".images").fadeOut('fast', function(){
