@@ -8169,12 +8169,20 @@ body {
   display: flex;
   align-items: center; }
 
+.top-buffer {
+  margin-top: 40px; }
+
 .navbar {
   margin-top: 50px;
   height: 170px; }
+  .navbar.no-fixed {
+    position: absolute; }
   .navbar.know_us {
     height: 90px;
     margin-top: 20px; }
+    .navbar.know_us .container {
+      width: 65%;
+      max-width: 950px; }
   .navbar.navbar-default {
     background-color: transparent;
     border-color: transparent; }
@@ -8273,15 +8281,18 @@ body {
   transition: all 0.2s linear;
   background-image: url(../images/img_know_us/bg_banner.png); }
   #body-know_us .jumbotron img {
-    width: 100%; }
+    width: 110%;
+    margin-left: -45px; }
   #body-know_us .jumbotron .texts .text {
     font-size: 18px;
-    color: #6c6c6c; }
+    color: #6c6c6c;
+    line-height: 18px; }
     #body-know_us .jumbotron .texts .text.bold-blue {
       font-family: "Hagin Caps";
       text-transform: uppercase;
       color: #1c2f43;
       font-size: 38px;
+      line-height: 35px;
       font-weight: 500; }
       #body-know_us .jumbotron .texts .text.bold-blue .font-dif {
         font-size: 48px; }
@@ -8292,7 +8303,7 @@ body {
   text-align: center;
   width: 100%;
   position: absolute;
-  bottom: 20px; }
+  bottom: 26px; }
   #body-know_us #scroll img {
     height: 130px;
     opacity: 0.5; }
@@ -8300,7 +8311,8 @@ body {
 #body-know_us #section01 {
   color: #595959; }
   #body-know_us #section01 .container {
-    width: 70%; }
+    width: 65%;
+    max-width: 950px; }
   #body-know_us #section01 .texts {
     padding-right: 80px; }
   #body-know_us #section01 .title-section {
@@ -8327,7 +8339,8 @@ body {
   bottom: 85px;
   color: #595959; }
   #body-know_us #section02 .container {
-    width: 70%; }
+    width: 65%;
+    max-width: 950px; }
   #body-know_us #section02 .texts {
     padding-left: 80px; }
   #body-know_us #section02 .title-section {
@@ -8344,7 +8357,8 @@ body {
   bottom: 145px;
   color: #595959; }
   #body-know_us #section03 .container {
-    width: 70%; }
+    width: 65%;
+    max-width: 950px; }
   #body-know_us #section03 .title-section {
     margin-top: 125px;
     font-weight: bold;
@@ -8358,21 +8372,24 @@ body {
 #body-know_us #section04 {
   position: relative;
   bottom: 125px;
-  color: #595959; }
+  color: #595959;
+  margin-top: 20px; }
   #body-know_us #section04 .container {
-    width: 70%; }
+    width: 65%;
+    max-width: 950px; }
   #body-know_us #section04 .texts {
     padding-left: 80px; }
   #body-know_us #section04 .btn {
-    height: 35px;
-    width: 150px;
+    height: 45px;
+    width: 170px;
+    font-size: 15px;
+    line-height: 30px;
     border-color: transparent;
     border-radius: 0px;
     float: right; }
     #body-know_us #section04 .btn.btn-danger {
       background-color: #dd6d5c; }
   #body-know_us #section04 .title-section {
-    margin-top: 125px;
     font-weight: bold;
     font-size: 28px;
     text-transform: uppercase;
@@ -8390,7 +8407,8 @@ body {
   color: #595959;
   margin-bottom: 50px; }
   #body-know_us #section05 .container {
-    width: 70%; }
+    width: 65%;
+    max-width: 950px; }
   #body-know_us #section05 .title-section {
     font-weight: bold;
     font-size: 20px;
@@ -8406,9 +8424,12 @@ body {
     #body-know_us #section05 .btn.btn-danger {
       background-color: #dd6d5c; }
   #body-know_us #section05 p {
-    text-transform: uppercase;
     font-size: 15px;
     line-height: 15px; }
+    #body-know_us #section05 p.text-title {
+      text-align: center;
+      width: 60%;
+      margin: 0 auto 55px auto; }
   #body-know_us #section05 img {
     width: 100%; }
   #body-know_us #section05 h2 {
@@ -8424,9 +8445,10 @@ body {
 
 #body-know_us #sectionMail {
   color: white;
-  background-color: #ffb757; }
+  background-image: url(../images/img_know_us/bg_mail_footer.PNG); }
   #body-know_us #sectionMail .container {
-    width: 70%; }
+    width: 65%;
+    max-width: 950px; }
   #body-know_us #sectionMail h2 {
     text-align: center;
     font-weight: 600;
@@ -8437,7 +8459,7 @@ body {
     width: 100%; }
   #body-know_us #sectionMail .form-control {
     border-color: transparent;
-    background-color: #d79b4a; }
+    background-image: url(../images/img_know_us/bg_footer.PNG); }
   #body-know_us #sectionMail .form-group label {
     font-weight: 500;
     font-size: 15px; }
@@ -8454,13 +8476,14 @@ body {
       background-color: #dd6d5c; }
 
 #body-know_us footer {
-  background-color: #d79b4a;
+  background-image: url(../images/img_know_us/bg_footer.PNG);
   padding-top: 15px;
   color: white;
   opacity: 1;
   height: 100%; }
   #body-know_us footer .container {
-    width: 70%; }
+    width: 65%;
+    max-width: 950px; }
   #body-know_us footer .row {
     margin-top: 15px;
     margin-bottom: 10px; }

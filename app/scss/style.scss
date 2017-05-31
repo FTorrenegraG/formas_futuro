@@ -29,12 +29,20 @@ body{
     display: flex;
     align-items: center;
 }
+.top-buffer { margin-top:40px; }
 .navbar{
 	margin-top: 50px;
 	height: 170px;
+	&.no-fixed{
+		position: absolute;
+	}
 	&.know_us{
 		height: 90px;
 		margin-top: 20px;
+		.container{
+			width: 65%;
+			max-width: 950px;
+		}
 	}
 	&.navbar-default{
 		background-color: transparent;
@@ -175,17 +183,20 @@ body{
 		transition: all 0.2s linear;
 		background-image: url(../images/img_know_us/bg_banner.png);
 		img{
-			width: 100%;
+			width: 110%;
+			margin-left: -45px;
 		}
 		.texts{
 			.text{
 				font-size: 18px;
 				color: #6c6c6c;
+				line-height: 18px;
 				&.bold-blue{
 					font-family: $font-family-base-especial;
 					text-transform: uppercase;
 					color: #1c2f43;
 					font-size: 38px;
+					line-height: 35px;
 					font-weight: 500;
 					.font-dif{
 						font-size: 48px;
@@ -201,7 +212,7 @@ body{
 		text-align: center;
 		width: 100%;
 		position: absolute;
-		bottom: 20px;
+		bottom: 26px;
 		img{
 			height: 130px;
 			opacity: 0.5;
@@ -210,7 +221,8 @@ body{
 	#section01{
 		color: $color-text;
 		.container{
-			width: 70%;
+			width: 65%;
+			max-width: 950px;
 		}
 		.texts{
 			padding-right: 80px;
@@ -244,7 +256,8 @@ body{
 		bottom: 85px;
 		color: $color-text;
 		.container{
-			width: 70%;
+			width: 65%;
+			max-width: 950px;
 		}
 		.texts{
 			padding-left: 80px;
@@ -266,7 +279,8 @@ body{
 		bottom: 145px;
 		color: $color-text;
 		.container{
-			width: 70%;
+			width: 65%;
+			max-width: 950px;
 		}
 		.texts{
 			
@@ -289,16 +303,20 @@ body{
 		position: relative;
 		bottom: 125px;
 		color: $color-text;
+		margin-top: 20px;
 		.container{
-			width: 70%;
+			width: 65%;
+			max-width: 950px;
 		}
 		.texts{
 			padding-left: 80px;
 
 		}
 		.btn{
-			height: 35px;
-			width: 150px;
+			height: 45px;
+			width: 170px;
+			font-size: 15px;
+			line-height: 30px;
 			border-color: transparent;
 			border-radius: 0px;
 			float: right;
@@ -307,7 +325,6 @@ body{
 			}
 		}
 		.title-section{
-			margin-top: 125px;
 			font-weight: bold;
 			font-size: 28px;
 			text-transform: uppercase;
@@ -328,7 +345,8 @@ body{
 		color: $color-text;
 		margin-bottom: 50px;
 		.container{
-			width: 70%;
+			width: 65%;
+			max-width: 950px;
 		}
 		.title-section{
 			font-weight: bold;
@@ -349,9 +367,13 @@ body{
 			}
 		}
 		p{
-			text-transform: uppercase;
 			font-size: 15px;
 			line-height: 15px;
+			&.text-title{
+				text-align: center;
+				width: 60%;
+				margin: 0 auto 55px auto;
+			}
 		}
 		img{
 			width: 100%;
@@ -371,9 +393,10 @@ body{
 	}
 	#sectionMail{
 		color: white;
-		background-color: #ffb757;
+		background-image: url(../images/img_know_us/bg_mail_footer.PNG);
 		.container{
-			width: 70%;
+			width: 65%;
+			max-width: 950px;
 		}
 		h2{
 			text-align: center;
@@ -387,7 +410,7 @@ body{
 		}
 		.form-control{
 			border-color: transparent;
-			background-color: #d79b4a;
+			background-image: url(../images/img_know_us/bg_footer.PNG);
 		}
 		.form-group{
 			label{
@@ -410,13 +433,14 @@ body{
 		}
 	}
 	footer{
-		background-color: #d79b4a;
+		background-image: url(../images/img_know_us/bg_footer.PNG);
 		padding-top: 15px;
 		color: white;
 		opacity: 1;
 		height: 100%;
 		.container{
-			width: 70%;
+			width: 65%;
+			max-width: 950px;
 		}
 		.row{
 			margin-top: 15px;

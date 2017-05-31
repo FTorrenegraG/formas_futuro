@@ -24,6 +24,7 @@ $( document ).ready(function() {
   $("#navbar-toggle").on("click",function () {
     if ($("#navbar-toggle").hasClass('collapsed')) {
       $(".icon-bar").addClass('white')
+      $("footer").addClass('hide')
       $(".icon-bar").removeClass('dark')
       $(".dark-img-brand").addClass('hide')
       $(".white-img-brand").removeClass('hide')
@@ -34,6 +35,7 @@ $( document ).ready(function() {
     }else{
       $(".icon-bar").removeClass('white')
       $(".icon-bar").addClass('dark')
+      $("footer").removeClass('hide')
       $(".dark-img-brand").removeClass('hide')
       $(".white-img-brand").addClass('hide')
       $("#navbar-toggle").addClass('collapsed')
